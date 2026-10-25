@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-HK">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>《六國論》範文導讀｜漢華中學中國語文科</title>
+<style>
+
+:root{
+  --blue:#2563eb;--blue-dark:#1d4ed8;--blue-soft:#eff6ff;--blue-mid:#dbeafe;
+  --ink:#1f2937;--muted:#4b5563;--line:#e5e7eb;--card:#fff;--bg:#f4f6fb;
+  --ok:#16a34a;--ok-bg:#dcfce7;--bad:#dc2626;--bad-bg:#fee2e2;--warn:#b45309;--warn-bg:#fef3c7;
+  --radius:14px;--shadow:0 1px 4px rgba(0,0,0,.08);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"Noto Sans TC","PingFang TC","PingFang HK","Microsoft JhengHei","Noto Sans CJK TC",sans-serif;background:var(--bg);color:var(--ink);font-size:17px;line-height:1.65}
+a{color:var(--blue)}
+.skip{position:absolute;left:-9999px}.skip:focus{left:8px;top:8px;background:#fff;padding:8px 12px;z-index:100;border-radius:8px}
+.topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);box-shadow:0 1px 0 rgba(37,99,235,.06)}
+.topbar-inner{max-width:880px;margin:0 auto;padding:10px 14px 8px}
+.brand{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px;margin-bottom:6px}
+.brand .school{font-size:.85rem;color:var(--blue);font-weight:700;letter-spacing:.02em}
+.brand h1{margin:0;font-size:1.15rem;font-weight:800}
+.nav{display:flex;flex-wrap:wrap;gap:6px}
+.nav a{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:6px 12px;border-radius:999px;background:var(--blue-soft);color:var(--blue-dark);text-decoration:none;font-weight:700;font-size:.92rem;border:1px solid transparent}
+.nav a:hover,.nav a:focus{background:var(--blue);color:#fff;outline:none}
+main{max-width:880px;margin:0 auto;padding:16px 14px 80px}
+.sec{margin:22px 0 28px;scroll-margin-top:110px}
+.sec>h2{margin:0 0 12px;font-size:1.35rem;color:var(--blue-dark);padding-bottom:6px;border-bottom:3px solid var(--blue-mid)}
+.sec>h3,.card h3{margin:16px 0 8px;font-size:1.08rem}
+.card{background:var(--card);border-radius:var(--radius);padding:16px 18px;box-shadow:var(--shadow);margin:10px 0}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+@media(max-width:700px){.grid2,.grid3{grid-template-columns:1fr}}
+.pill{display:inline-block;background:var(--blue-soft);color:var(--blue-dark);border-radius:999px;padding:2px 10px;font-size:.85rem;font-weight:700;margin-right:4px}
+.muted{color:var(--muted);font-size:.95rem}
+.person{border-left:4px solid var(--blue);padding-left:12px;margin:10px 0}
+.story{border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:#fafbff}
+.story h4{margin:0 0 8px;color:var(--blue-dark)}
+.story dl{margin:0;display:grid;grid-template-columns:4.5em 1fr;gap:4px 8px}
+.story dt{font-weight:700;color:var(--muted)}.story dd{margin:0}
+.story .baihua{margin:10px 0 0;padding:10px 12px;background:#f0fdf4;border-left:4px solid #16a34a;border-radius:0 10px 10px 0;font-size:.95rem;line-height:1.65;color:#14532d}
+.story .baihua strong{color:#166534}
+.vocab{display:grid;gap:8px}
+.vocab-item{display:grid;grid-template-columns:minmax(7em,auto) 1fr;gap:8px 12px;padding:10px 12px;background:#fafbff;border-radius:10px;border:1px solid var(--line)}
+.vocab-item b{color:var(--blue-dark)}
+@media(max-width:560px){.vocab-item{grid-template-columns:1fr}}
+.struct ul{margin:6px 0;padding-left:1.2em}.struct li{margin:4px 0}
+.student-form{display:grid;grid-template-columns:1fr 1fr 1.4fr;gap:10px}
+@media(max-width:640px){.student-form{grid-template-columns:1fr}}
+label.field{display:block;font-weight:700;font-size:.92rem;margin-bottom:4px}
+input.field,select.field{width:100%;min-height:48px;padding:10px 12px;font:inherit;border:2px solid #d1d5db;border-radius:10px;background:#fff}
+input.field:focus,select.field:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(37,99,235,.2)}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.tabs button{flex:1;min-width:120px;min-height:48px;font:inherit;font-weight:700;border:2px solid var(--blue);border-radius:12px;background:#fff;color:var(--blue);cursor:pointer}
+.tabs button.active,.tabs button[aria-selected="true"]{background:var(--blue);color:#fff}
+.prog-row{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:.95rem;color:var(--muted);margin:8px 0 4px}
+.bar{height:10px;background:#e5e7eb;border-radius:6px;overflow:hidden}
+.bar>div{height:100%;background:var(--blue);width:0;transition:width .3s}
+.overall{background:var(--blue-soft);border:1px solid var(--blue-mid);border-radius:12px;padding:12px 14px;margin:12px 0}
+.opt{display:flex;align-items:flex-start;gap:10px;min-height:56px;padding:12px;margin:8px 0;border:2px solid #d1d5db;border-radius:12px;background:#fff;cursor:pointer;text-align:left}
+.opt input{width:22px;height:22px;margin-top:3px;flex:none}
+.opt.sel{border-color:var(--blue);background:var(--blue-soft)}
+.opt.ok{border-color:var(--ok);background:var(--ok-bg)}
+.opt.bad{border-color:var(--bad);background:var(--bad-bg)}
+.stem{font-size:1.08rem;font-weight:700;margin:0 0 10px}
+.fb{margin-top:12px;padding:12px;border-radius:10px}
+.fb.ok{background:var(--ok-bg)}.fb.bad{background:var(--bad-bg)}
+.btn{font:inherit;font-weight:700;min-height:52px;width:100%;margin-top:12px;border:0;border-radius:12px;background:var(--blue);color:#fff;cursor:pointer}
+.btn:disabled{background:#9ca3af;cursor:not-allowed}
+.btn.sec{background:#fff;color:var(--blue);border:2px solid var(--blue)}
+.btn.ok{background:var(--ok)}
+.btn.warn{background:#d97706}
+.btn-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:500px){.btn-row{grid-template-columns:1fr}}
+.big{font-size:1.8rem;font-weight:800;text-align:center;margin:8px 0}
+.rv{border-top:1px solid var(--line);padding:10px 0}.rv .t{font-weight:700}.c{color:#15803d}.w{color:#b91c1c}
+.note{background:var(--warn-bg);border-left:4px solid var(--warn);padding:10px 12px;border-radius:0 10px 10px 0;margin:10px 0;font-size:.95rem}
+.video-box{aspect-ratio:16/9;background:linear-gradient(135deg,#dbeafe,#eff6ff);border:2px dashed #93c5fd;border-radius:14px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;padding:20px;text-align:center;color:var(--muted)}
+.video-box iframe{width:100%;height:100%;border:0;border-radius:12px}
+.video-wrap{position:relative;aspect-ratio:16/9;border-radius:14px;overflow:hidden;background:#000}
+.footer{max-width:880px;margin:0 auto;padding:8px 14px 28px;color:var(--muted);font-size:.88rem;text-align:center}
+[hidden]{display:none!important}
+@media print{
+  .topbar{position:static;box-shadow:none}
+  .nav,.btn,#quizPanel .btn,.student-form,input,select,.tabs{display:none!important}
+  body{background:#fff;font-size:14px}
+  .card,.story,.vocab-item{box-shadow:none;border:1px solid #ccc}
+  .sec{break-inside:avoid}
+}
+
+.classic{font-size:1.05rem;line-height:2;letter-spacing:.02em}
+.classic p{margin:0 0 1em}
+.classic h3{margin:18px 0 10px;font-size:1.1rem;color:var(--blue-dark);border-left:4px solid var(--blue);padding-left:10px}
+.classic .attr{margin-top:12px;padding-top:10px;border-top:1px dashed var(--line);font-size:.9rem;color:var(--muted);line-height:1.55}
+.yuyi{line-height:1.85}
+.yuyi p{margin:0 0 .95em}
+.yuyi h3{margin:18px 0 10px;font-size:1.1rem;color:var(--blue-dark);border-left:4px solid var(--blue);padding-left:10px}
+.sec-head-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;margin:0 0 12px;padding-bottom:6px;border-bottom:3px solid var(--blue-mid)}
+.sec-head-row h2{margin:0;padding:0;border:0;font-size:1.35rem;color:var(--blue-dark)}
+.btn-toggle{font:inherit;font-weight:700;font-size:.88rem;min-height:40px;padding:6px 14px;border-radius:999px;border:2px solid var(--blue);background:#fff;color:var(--blue);cursor:pointer;width:auto;margin:0}
+.btn-toggle:hover,.btn-toggle:focus{background:var(--blue);color:#fff;outline:none}
+
+</style>
+</head>
+<body>
+<a class="skip" href="#main">跳至正文</a>
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <span class="school">漢華中學中國語文科</span>
+      <h1>《六國論》範文導讀</h1>
+    </div>
+    <nav class="nav" aria-label="章節導航">
+      <a href="#daodu">導讀</a>
+      <a href="#quanwen">全文</a>
+      <a href="#yuyi">語譯</a>
+      <a href="#zici">重點字詞</a>
+      <a href="#zhangfa">章法／論證</a>
+      <a href="#zice">自測</a>
+      <a href="#shipin">影片</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ========== 1 導讀 ========== -->
+<section class="sec" id="daodu">
+  <h2>一、導讀</h2>
+  <p class="muted">對象：中四至中六　｜　篇章：《六國論》　｜　作者：蘇洵（北宋）　｜　出處：《嘉祐集・權書》</p>
+
+  <div class="card">
+    <h3>背景</h3>
+    <p>北宋對外積弱，常以銀絹向<strong>遼（契丹）、西夏</strong>納幣求和，國力耗損。蘇洵作《六國論》，借戰國時期韓、趙、魏、楚、燕、齊六國滅亡的史事，指出「弊在賂秦」，諷諫當世勿重蹈覆轍——屬<strong>借古諷今</strong>的史論。</p>
+  </div>
+
+  <div class="card">
+    <h3>作者簡介</h3>
+    <div class="person"><span class="pill">作者</span><strong>蘇洵</strong>（1009–1066），字明允，眉州眉山人，與子蘇軾、蘇轍合稱「三蘇」。本文出自《權書》，議論縱橫，筆力雄健。</div>
+  </div>
+
+  <div class="card">
+    <h3>記住三個關鍵</h3>
+    <div class="grid3" style="margin-top:10px">
+      <article class="story">
+        <h4>① 弊在賂秦</h4>
+        <dl>
+          <dt>論點</dt><dd>六國破滅，非兵不利、戰不善，而在割地賂秦。</dd>
+          <dt>兩層</dt><dd>賂秦者力虧而亡；不賂者因失強援亦亡。</dd>
+        </dl>
+        <p class="baihua"><strong>白話：</strong>六國滅亡，不是因為兵器差、打仗差，而是因為用土地討好秦國。割地的國家國力變弱而亡；不割地的，也因為失去盟友支援而亡。所以根子仍在「賂秦」。</p>
+      </article>
+      <article class="story">
+        <h4>② 不賂者喪</h4>
+        <dl>
+          <dt>齊</dt><dd>與嬴而不助五國，終繼五國遷滅。</dd>
+          <dt>燕趙</dt><dd>曾用兵卻不能堅持；處秦革滅殆盡之際，智力孤危。</dd>
+        </dl>
+        <p class="baihua"><strong>白話：</strong>齊國沒有割地給秦，卻親秦、不幫五國，五國一滅自己也難保。燕、趙起初肯抵抗，但燕用刺客、趙殺良將，又正逢各國幾乎被滅盡，孤立無援，終究還是亡了。</p>
+      </article>
+      <article class="story">
+        <h4>③ 借古諷今</h4>
+        <dl>
+          <dt>策</dt><dd>封謀臣、禮奇才、幷力西嚮。</dd>
+          <dt>警</dt><dd>茍以天下之大而從六國破亡之故事，是又在六國下矣。</dd>
+        </dl>
+        <p class="baihua"><strong>白話：</strong>蘇洵建議：把賂秦的土地封給謀臣、用禮遇招攬人才、合力抗秦。文章真正用意是警告北宋：國土比六國大得多，若仍像六國那樣納幣求和、重蹈覆轍，就連六國都不如了。</p>
+      </article>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>溫習口訣</h3>
+    <p>弊在賂秦，中心論；祖先得地子孫棄，對比明；不賂亦喪失強援，齊燕趙；封謀臣禮奇才，抗秦方；借古諷今警北宋，作文意。</p>
+  </div>
+</section>
+
+<!-- ========== 2 全文 ========== -->
+<section class="sec" id="quanwen">
+  <h2>二、全文</h2>
+  <p class="muted">蘇洵《六國論》　｜　文本依教育局「指定文言經典學習材料」參考版本</p>
+  <div class="card classic">
+    <h3>中心論點</h3>
+    <p>六國破滅，非兵不利，戰不善，弊在賂秦。賂秦而力虧，破滅之道也。或曰：「六國互喪，率賂秦耶？」曰：「不賂者以賂者喪。蓋失強援，不能獨完，故曰『弊在賂秦』也。」</p>
+    <h3>賂秦之害</h3>
+    <p>秦以攻取之外，小則獲邑，大則得城，較秦之所得與戰勝而得者，其實百倍；諸侯之所亡與戰敗而亡者，其實亦百倍。則秦之所大欲，諸侯之所大患，固不在戰矣。思厥先祖父，暴霜露，斬荊棘，以有尺寸之地。子孫視之不甚惜，舉以予人，如棄草芥。今日割五城，明日割十城，然後得一夕安寢，起視四境，而秦兵又至矣。然則諸侯之地有限，暴秦之欲無厭，奉之彌繁，侵之愈急，故不戰而強弱勝負已判矣。至於顛覆，理固宜然。古人云：「以地事秦，猶抱薪救火，薪不盡，火不滅。」此言得之。</p>
+    <h3>不賂者以賂者喪</h3>
+    <p>齊人未嘗賂秦，終繼五國遷滅，何哉？與嬴而不助五國也。五國既喪，齊亦不免矣。燕趙之君，始有遠略，能守其土，義不賂秦。是故燕雖小國而後亡，斯用兵之效也。至丹以荊卿為計，始速禍焉。趙嘗五戰于秦，二敗而三勝，後秦擊趙者再，李牧連卻之；洎牧以讒誅，邯鄲為郡，惜其用武而不終也。且燕趙處秦革滅殆盡之際，可謂智力孤危，戰敗而亡，誠不得已。向使三國各愛其地，齊人勿附於秦，刺客不行，良將猶在，則勝負之數，存亡之理，當與秦相較，或未易量。</p>
+    <h3>合力抗秦與告誡</h3>
+    <p>嗚呼！以賂秦之地，封天下之謀臣；以事秦之心，禮天下之奇才；幷力西嚮，則吾恐秦人食之不得下嚥也。悲夫！有如此之勢，而為秦人積威之所劫，日削月割，以趨於亡。為國者無使為積威之所劫哉！</p>
+    <h3>借古諷今</h3>
+    <p>夫六國與秦皆諸侯，其勢弱於秦，而猶有可以不賂而勝之之勢；茍以天下之大，而從六國破亡之故事，是又在六國下矣！</p>
+    <p class="attr">出處：蘇洵《六國論》（《嘉祐集・權書》）；文本依教育局「指定文言經典學習材料」參考版本（ks4_15_text.pdf）。註：以上僅就坊間所見資料，提供一個參考版本；教師亦可參考、使用其他版本。</p>
+  </div>
+</section>
+
+<!-- ========== 3 語譯 ========== -->
+<section class="sec" id="yuyi">
+  <div class="sec-head-row">
+    <h2>三、語譯</h2>
+    <button type="button" class="btn-toggle" id="yuyiToggle" aria-controls="yuyiBody" aria-expanded="true">隱藏語譯</button>
+  </div>
+  <div id="yuyiBody">
+  <p class="note">以下語譯供自學參考，考試請以課文原文為準。</p>
+  <div class="card yuyi">
+    <h3>中心論點</h3>
+    <p>六國滅亡，並非兵器不鋒利、打仗不得法，毛病在於用土地賄賂秦國。賄賂秦國使自己國力減損，這正是滅亡的原因。有人說：「六國相繼滅亡，難道全都是因為賄賂秦國嗎？」回答是：「不賄賂秦國的，也因為賄賂秦國的國家而滅亡。大概是失去強大的支援，不能獨自保全，所以說『毛病在於賄賂秦國』。」</p>
+    <h3>賂秦之害</h3>
+    <p>秦國除了用攻戰奪取土地之外，小則獲得市邑，大則獲得城池；比較起來，秦國靠諸侯奉獻所得，其實比戰勝所得多出百倍；諸侯因奉獻而失去的，其實也比戰敗所失多出百倍。那麼秦國最大的慾望、諸侯最大的禍患，本來就不在戰爭啊。想想他們的祖輩父輩，冒着霜露、斬除荊棘，才擁有那一點點土地。子孫卻看得不太珍惜，拿來送給別人，好像丟棄小草一樣。今天割五座城，明天割十座城，然後才換來一夜安睡；起來看看四方邊境，秦兵卻又到了。既然如此，那麼諸侯的土地有限，強暴秦國的慾望卻永不滿足；奉送越多，侵略越急，所以不用打仗，強弱勝負已經分明了。至於最後覆滅，按道理本來就該如此。古人說：「用土地侍奉秦國，好比抱着柴薪去救火，柴不燒盡，火不會滅。」這話說對了。</p>
+    <h3>不賂者以賂者喪</h3>
+    <p>齊國不曾賄賂秦國，最終還是跟着五國滅亡，為甚麼呢？因為親附秦國卻不援助其餘五國。五國已經滅亡，齊國也就難免了。燕、趙的君主起初有長遠謀略，能守住國土，堅守道義不賄賂秦國。所以燕雖是小國卻較後滅亡，這是用兵抵抗的成效。等到太子丹用荊軻行刺作為計策，才招致禍患。趙國曾經與秦國交戰五次，兩次戰敗、三次獲勝；後來秦國兩次攻打趙國，李牧接連擊退敵人；等到李牧因讒言被殺，邯鄲便成了秦國的郡，可惜趙國用武力抵抗卻不能堅持到底。況且燕、趙正處在秦國差不多把各國消滅乾淨的時候，可說是智窮力竭、孤立危急，戰敗而亡，實在是不得已。假使韓、魏、楚三國各自愛惜土地，齊國不親附秦國，刺客不去行刺，良將仍然健在，那麼勝負的命運、存亡的道理，拿來跟秦國較量，或許還不容易估量。</p>
+    <h3>合力抗秦與告誡</h3>
+    <p>唉！如果拿賄賂秦國的那些土地，分封給天下的謀臣；用侍奉秦國的那片心意，去禮遇天下的奇才；合力向西進攻，那麼我恐怕秦國人連飯也吞嚥不下了。可悲啊！有這樣的形勢，卻被秦國人長期積累的威勢所脅迫，天天削減、月月割讓，以致走向滅亡。治理國家的人，不要讓自己被敵人積累的威勢所脅迫啊！</p>
+    <h3>借古諷今</h3>
+    <p>六國和秦國都是諸侯，六國的勢力弱於秦國，卻還有可以不靠賄賂而戰勝秦國的形勢；如果憑着統一天下這樣大的局面，卻還去蹈襲六國滅亡的舊事，那就又在六國之下了！</p>
+  </div>
+  </div>
+</section>
+
+<!-- ========== 4 重點字詞 ========== -->
+<section class="sec" id="zici">
+  <h2>四、重點字詞</h2>
+  <p class="muted">以下約十二組文言詞語／成語，宜連同課文語境記誦。</p>
+  <div class="card vocab">
+    <div class="vocab-item"><b>弊在賂秦</b><span>滅亡的癥結在於用土地賄賂秦國。全文中心論點。</span></div>
+    <div class="vocab-item"><b>賂</b><span>贈送財物（土地）討好對方。「賂秦而力虧」——割地事秦而使國力減損。</span></div>
+    <div class="vocab-item"><b>率</b><span>全都、一概。「六國互喪，率賂秦耶」——難道全都因賂秦嗎？</span></div>
+    <div class="vocab-item"><b>厥</b><span>他們的。「思厥先祖父」——想到他們的祖輩父輩。</span></div>
+    <div class="vocab-item"><b>暴霜露</b><span>冒着霜露（「暴」讀「僕」）。與「斬荊棘」合寫祖先創業之艱。</span></div>
+    <div class="vocab-item"><b>厭</b><span>滿足（通「饜」）。「暴秦之欲無厭」——秦的貪慾永不滿足。</span></div>
+    <div class="vocab-item"><b>彌</b><span>越、更加。「奉之彌繁，侵之愈急」——奉獻越多，侵略越急。</span></div>
+    <div class="vocab-item"><b>與嬴</b><span>親附秦國（嬴：秦姓）。「與嬴而不助五國也」——齊國結交秦卻不助五國。</span></div>
+    <div class="vocab-item"><b>速禍</b><span>招致禍患。「始速禍焉」——太子丹用荊軻之計才招來災禍。</span></div>
+    <div class="vocab-item"><b>洎</b><span>及、等到。「洎牧以讒誅」——等到李牧因讒言被殺。</span></div>
+    <div class="vocab-item"><b>劫</b><span>脅迫。「為積威之所劫」——被敵人長期積累的威勢所脅迫。</span></div>
+    <div class="vocab-item"><b>故事</b><span>舊事、先例（古今異義）。「從六國破亡之故事」——重蹈六國滅亡的覆轍。</span></div>
+  </div>
+</section>
+
+<!-- ========== 5 章法／論證 ========== -->
+<section class="sec" id="zhangfa">
+  <h2>五、章法／論證</h2>
+  <div class="card struct">
+    <h3>1. 總—分—總，層次分明</h3>
+    <p>首段提出中心論點<strong>「弊在賂秦」</strong>，並以「賂者／不賂者」兩線管領下文；中間分論賂秦之害與齊燕趙滅亡之由；末段提出抗秦之策，並點明<strong>借古諷今</strong>。</p>
+    <h3>2. 主要論證手法</h3>
+    <ul>
+      <li><strong>開門見山</strong>：「六國破滅，非兵不利，戰不善，弊在賂秦。」破中立論。</li>
+      <li><strong>設問駁論</strong>：「或曰……曰……」預設反對意見再加反駁，使論證更嚴密。</li>
+      <li><strong>對比論證</strong>：祖先創業艱辛 ↔ 子孫棄地如草芥；秦之所欲 ↔ 諸侯之患；賂秦 ↔ 抗秦。</li>
+      <li><strong>引用＋比喻</strong>：「以地事秦，猶抱薪救火」——引古語，以喻說理。</li>
+      <li><strong>舉例論證</strong>：齊（與嬴不助）、燕（荊卿速禍）、趙（用武不終）。</li>
+      <li><strong>假設論證</strong>：「向使三國各愛其地……或未易量。」</li>
+      <li><strong>類比諷今</strong>：六國勢弱於秦猶可不賂而勝；北宋「以天下之大」若再蹈覆轍，是又在六國下。</li>
+    </ul>
+    <h3>3. 議論中帶感情</h3>
+    <p>「嗚呼！」「悲夫！」等感歎，以及「為國者無使為積威之所劫哉」，既論六國，亦警當世，感染力強。</p>
+    <h3>4. 結構示意</h3>
+    <p>中心論點（弊在賂秦）→ 正面申論賂秦必亡 → 反面申論不賂者亦喪 → 提出封謀臣、禮奇才、幷力西嚮 → 借古諷今收束。</p>
+  </div>
+</section>
+
+<!-- ========== 6 自測 ========== -->
+<section class="sec" id="zice">
+  <h2>六、自測</h2>
+  <p class="muted">題目源自 Edcafe 練習庫（內容理解／字詞解釋／寫作手法各 20 題，合共 60 題）。可先作答；交卷前請填學生資料。</p>
+
+  <div class="card" id="studentCard">
+    <h3>學生資料（交卷必填）</h3>
+    <div class="student-form">
+      <div>
+        <label class="field" for="cls">班別</label>
+        <input class="field" id="cls" name="cls" placeholder="例：4A" maxlength="4" autocomplete="off" required>
+      </div>
+      <div>
+        <label class="field" for="sid">學號</label>
+        <input class="field" id="sid" name="sid" placeholder="例：01" maxlength="4" autocomplete="off" required>
+      </div>
+      <div>
+        <label class="field" for="sname">姓名</label>
+        <input class="field" id="sname" name="sname" placeholder="請輸入姓名" maxlength="20" autocomplete="name" required>
+      </div>
+    </div>
+    <p class="muted" style="margin:8px 0 0">班別可用如 4A、5C、6D；學號請填兩位數字（如 01）。</p>
+  </div>
+
+  <div class="overall" id="overallBox">
+    <div class="prog-row"><strong>整體進度</strong><span id="overallText">0 / 60 題　總分 0</span></div>
+    <div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="60" aria-valuenow="0" id="overallBar"><div id="overallFill"></div></div>
+    <div class="prog-row" style="margin-top:8px;font-size:.9rem">
+      <span>內容理解：<b id="scContent">0</b>/20</span>
+      <span>字詞解釋：<b id="scVocab">0</b>/20</span>
+      <span>寫作手法：<b id="scRhet">0</b>/20</span>
+    </div>
+  </div>
+
+  <div class="tabs" role="tablist" aria-label="練習部分">
+    <button type="button" role="tab" id="tab-content" aria-selected="true" aria-controls="panel-quiz" data-sec="content">內容理解（20）</button>
+    <button type="button" role="tab" id="tab-vocab" aria-selected="false" aria-controls="panel-quiz" data-sec="vocab">字詞解釋（20）</button>
+    <button type="button" role="tab" id="tab-rhet" aria-selected="false" aria-controls="panel-quiz" data-sec="rhetorical">寫作手法（20）</button>
+  </div>
+
+  <div class="card" id="panel-quiz" role="tabpanel">
+    <div class="prog-row"><span id="secProgText">第 1 / 20 題</span><span id="secScoreText">本節答對：0</span></div>
+    <div class="bar" id="secBar" role="progressbar" aria-valuemin="0" aria-valuemax="20" aria-valuenow="0"><div id="secFill"></div></div>
+    <form id="qform" onsubmit="return false" style="margin-top:12px">
+      <fieldset style="border:0;margin:0;padding:0">
+        <legend class="stem" id="stem"></legend>
+        <div id="opts"></div>
+      </fieldset>
+      <div id="fb" class="fb" hidden></div>
+      <button type="button" class="btn" id="checkBtn" disabled>檢查答案</button>
+      <div class="btn-row">
+        <button type="button" class="btn sec" id="nextBtn" hidden>下一題</button>
+        <button type="button" class="btn ok" id="secDoneBtn" hidden>完成本節</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="card" id="secResult" hidden>
+    <h3 id="secResultTitle">本節完成</h3>
+    <p class="big" id="secFinal"></p>
+    <p id="secFinalMsg" class="muted" style="text-align:center"></p>
+    <div class="btn-row">
+      <button type="button" class="btn sec" id="retrySecBtn">重做本節</button>
+      <button type="button" class="btn" id="goNextSecBtn">下一節</button>
+    </div>
+    <button type="button" class="btn warn" id="submitEarlyBtn" style="margin-top:10px" hidden>交卷（已完成全部）</button>
+    <h3>答題回顧</h3>
+    <div id="secReview"></div>
+  </div>
+
+  <div class="card" id="finalResult" hidden>
+    <h3>全部完成・交卷</h3>
+    <p class="big" id="finalScore"></p>
+    <p id="finalDetail" style="text-align:center"></p>
+    <p id="submitMsg" class="note" hidden></p>
+    <div class="btn-row">
+      <button type="button" class="btn ok" id="submitBtn">交卷至老師試算表</button>
+      <button type="button" class="btn sec" id="retryAllBtn">全部重做</button>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 7 影片 ========== -->
+<section class="sec" id="shipin">
+  <h2>七、影片｜寶寶老師陪你快速溫範文</h2>
+  <div class="card">
+    <p><a id="videoTitleLink" href="#" target="_blank" rel="noopener">寶寶老師陪你快速溫範文｜第二集《六國論》</a></p>
+    <div id="videoArea"></div>
+  </div>
+</section>
+
+</main>
+<footer class="footer">漢華中學中國語文科　｜　《六國論》範文導讀　｜　供課堂投影及學生自學</footer>
+
+<script>
+(function () {
+"use strict";
+
+/* ===== 老師設定（部署後請填寫） ===== */
+const GAS_WEBAPP_URL = 'https://script.google.com/macros/s/AKfycbw5KDSPY_nT_UWIxI-OdO7_YwFWbmjjWYv8ace96laxRUIX0sG6NQ4kIz0V-_Dq4ieoxA/exec';   // Apps Script 網頁應用程式 URL
+const YOUTUBE_ID = '3buvHy3aZe0'; // YouTube 影片 ID（非完整網址）
+
+/* ===== 題庫：與 Edcafe 來源完全一致；o[0] 為正確答案 ===== */
+var Q_CONTENT = [{"s": "本文的中心論點是：", "o": ["六國破滅，弊在賂秦", "六國兵器不夠鋒利", "秦國過於強大，六國無法抵擋", "六國君主昏庸"], "e": "首段即提出。"}, {"s": "「賂秦而力虧，破滅之道也」的意思是：", "o": ["賄賂秦國使自己國力虧損，這是滅亡的原因", "賄賂秦國可以強國", "秦國接受賄賂後國力大增，這是秦國統一天下的方法", "破滅之後才賄賂秦國"], "e": "解釋「弊在賂秦」。"}, {"s": "作者藉「或曰」提出「六國互喪，率賂秦耶」，這個疑問是：", "o": ["六國相繼滅亡，難道都是因為賂秦嗎？", "六國為何互相攻打", "六國互相攻打，以致一同滅亡，這和賂秦無關", "六國何時滅亡"], "e": "預設反對意見，再加反駁。"}, {"s": "作者如何解釋未賂秦的國家也滅亡？", "o": ["不賂者因賂者滅亡而失去強援，不能獨自保全", "它們兵器不利、作戰不善，所以即使不賂秦也必然滅亡", "它們君主昏庸", "它們地處偏遠"], "e": "「不賂者以賂者喪。」"}, {"s": "「較秦之所得與戰勝而得者，其實百倍」說明：", "o": ["秦國靠諸侯割地所得，比戰勝所得多百倍", "秦國打仗很厲害", "秦國戰勝所得的土地，比諸侯割讓的多出百倍", "諸侯戰勝秦國"], "e": "說明賂秦之害大於戰爭。"}, {"s": "「則秦之所大欲，諸侯之所大患，固不在戰矣」的意思是：", "o": ["秦國最想要的、諸侯最大的禍患，本來就不在戰爭（而在賂秦）", "秦國最想要的是打仗取勝，而諸侯最擔心的也正是與秦國作戰", "諸侯害怕戰爭", "戰爭是最大禍患"], "e": "推出賂秦為患。"}, {"s": "「思厥先祖父，暴霜露，斬荊棘，以有尺寸之地」強調：", "o": ["祖先得地艱辛，子孫卻輕易送人", "祖先喜歡種田", "祖先土地廣大", "祖先開墾土地，生活十分富足安樂"], "e": "對比見子孫不肖。"}, {"s": "「今日割五城，明日割十城，然後得一夕安寢」說明：", "o": ["割地只能換得短暫安寧", "割地可以永保和平", "六國很富有，割地也不會損失", "秦國不要土地"], "e": "為下文秦兵又至作鋪墊。"}, {"s": "「諸侯之地有限，暴秦之欲無厭」揭示：", "o": ["以有限土地滿足無厭貪慾，必然失敗", "秦國土地有限", "諸侯很貪婪，不斷向秦國索取財物", "秦國很容易滿足"], "e": "點出賂秦必亡之理。"}, {"s": "作者引用「以地事秦，猶抱薪救火，薪不盡，火不滅」，用意是：", "o": ["說明割地賂秦只會助長秦的貪慾，直至土地耗盡", "說明救火的方法", "說明柴草很重要", "說明當時常常發生火災，提醒諸侯要小心防火保護土地"], "e": "以古語增強說服力。"}, {"s": "作者認為齊國滅亡的原因是：", "o": ["親附秦國而不幫助其餘五國", "兵器不利，軍隊缺乏訓練", "大量賂秦", "君主被刺"], "e": "「與嬴而不助五國也。」"}, {"s": "作者認為燕國雖是小國卻較後滅亡，是因為：", "o": ["不賂秦而用兵抵抗", "土地廣大，秦國難以攻打", "與秦結盟", "有李牧為將"], "e": "「斯用兵之效也。」"}, {"s": "作者批評燕太子丹派荊軻刺秦王，認為：", "o": ["此舉加速了燕國的滅亡", "此舉十分正確，值得後人效法", "此舉救了燕國", "此舉與滅亡無關"], "e": "「至丹以荊卿為計，始速禍焉。」"}, {"s": "作者惋惜趙國的是：", "o": ["李牧因讒言被殺，用武不能堅持到底", "趙國從不打仗，一直依賴割地求和", "趙國賂秦太多", "趙國沒有良將"], "e": "「惜其用武而不終也。」"}, {"s": "「向使三國各愛其地，齊人勿附於秦，刺客不行，良將猶在」一句的作用是：", "o": ["假設六國不犯錯，勝負存亡或未可知", "說明六國一定勝利", "假設六國早已滅亡，秦國便能更早統一天下", "交代史實"], "e": "以假設推論。"}, {"s": "作者提出六國應如何對付秦國？", "o": ["以賂秦之地封謀臣，以事秦之心禮奇才，合力西向", "割更多土地", "向秦國投降", "各自割地賂秦，以換取長久和平，避免與秦國正面交戰"], "e": "正面提出策略。"}, {"s": "「則吾恐秦人食之不得下嚥也」的意思是：", "o": ["恐怕秦國連飯也吃不下（形容秦國將憂懼不安）", "恐怕秦國人糧食不足，連飯也沒得吃，只好向六國求援", "秦人生病", "秦人吃得太多"], "e": "喻秦人難以吞併六國。"}, {"s": "「為國者無使為積威之所劫哉」是作者對誰的告誡？", "o": ["治理國家的人", "秦王及其謀臣", "六國百姓", "士兵"], "e": "勸治國者勿為敵人威勢所脅。"}, {"s": "「茍以天下之大，而從六國破亡之故事，是又在六國下矣」的意思是：", "o": ["如果憑着統一天下之大，還重蹈六國滅亡的覆轍，那就連六國也不如了", "天下比六國大", "六國在天下之下", "如果憑着天下之大，便可以不理會六國的教訓，一定比六國更強大"], "e": "諷今之意。"}, {"s": "蘇洵寫作本文的深層用意是：", "o": ["借古諷今，諷諫北宋向遼、西夏納幣求和", "讚揚秦國統一天下的功業，歌頌秦王的雄才大略", "記錄戰國史事", "表達隱逸之志"], "e": "史論寄寓現實。"}];
+var Q_VOCAB = [{"s": "「非兵不利」中「兵」字的意思是：", "o": ["兵器", "士兵", "戰爭", "兵法"], "e": "不是兵器不鋒利。"}, {"s": "「弊在賂秦」中「賂」字的意思是：", "o": ["賄賂（指割地給秦）", "道路（指通往秦國的路）", "俸祿", "掠奪"], "e": "以土地賄賂秦國。"}, {"s": "「賂秦而力虧」中「虧」字的意思是：", "o": ["減損", "吃虧", "幸虧", "虧本"], "e": "國力因而減弱。"}, {"s": "「六國互喪」中「互」字的意思是：", "o": ["相繼", "互相", "交錯", "互助"], "e": "六國相繼滅亡。"}, {"s": "「率賂秦耶」中「率」字的意思是：", "o": ["全都、一概", "率領、帶領", "比率", "坦率"], "e": "難道全都是因賂秦嗎？"}, {"s": "「不能獨完」中「完」字的意思是：", "o": ["保全", "完成", "完畢", "完美"], "e": "不能獨自保全。"}, {"s": "「思厥先祖父」中「厥」字的意思是：", "o": ["他們的", "昏厥、暈倒", "突厥", "其中"], "e": "想到他們的祖輩父輩。"}, {"s": "「暴霜露」中「暴」字的意思是：", "o": ["冒着、暴露於", "暴力、兇暴", "暴躁", "突然"], "e": "冒着霜露。"}, {"s": "「暴秦之欲無厭」中「厭」字的意思是：", "o": ["滿足", "討厭", "厭倦", "壓迫"], "e": "秦國的貪慾永不滿足。"}, {"s": "「奉之彌繁」中「彌」字的意思是：", "o": ["越、更加", "彌補、填補", "瀰漫", "充滿"], "e": "奉送越多。"}, {"s": "「強弱勝負已判矣」中「判」字的意思是：", "o": ["分明、確定", "判斷、裁決", "判官", "審判"], "e": "勝負已見分曉。"}, {"s": "「此言得之」中「得」字的意思是：", "o": ["得當、說對了", "得到、獲得", "必須", "得意"], "e": "這話說得正確。"}, {"s": "「與嬴而不助五國也」中「與」字的意思是：", "o": ["親附、結交", "和、跟、同", "給予", "參與"], "e": "齊國親附秦國。"}, {"s": "「始速禍焉」中「速」字的意思是：", "o": ["招致", "快速", "速度", "迅速逃走"], "e": "太子丹派荊軻行刺，才招致禍患。"}, {"s": "「洎牧以讒誅」中「洎」字的意思是：", "o": ["及、等到", "淚水、眼淚", "湖泊", "停泊"], "e": "等到李牧因讒言被殺。"}, {"s": "「向使三國各愛其地」中「向使」的意思是：", "o": ["假如", "方向", "從前派遣", "向着"], "e": "假使三國各自愛惜土地。"}, {"s": "「或未易量」中「量」字的意思是：", "o": ["估計", "數量", "度量衡", "商量"], "e": "或許不容易估計。"}, {"s": "「禮天下之奇才」中「禮」字的意思是：", "o": ["禮遇", "禮物", "禮節", "禮貌"], "e": "以禮對待天下奇才。"}, {"s": "「為國者無使為積威之所劫哉」中「劫」字的意思是：", "o": ["脅迫", "搶劫", "劫數", "災難"], "e": "不要被敵人積累的威勢脅迫。"}, {"s": "「而從六國破亡之故事」中「故事」的意思是：", "o": ["舊事、先例", "傳說故事", "小說、傳說", "事故"], "e": "古今異義。"}];
+var Q_RHET = [{"s": "本文開首「六國破滅，非兵不利，戰不善，弊在賂秦」屬於：", "o": ["開門見山，提出中心論點", "設置懸念", "倒敘，先寫結果再交代原因", "借景抒情"], "e": "首句立論。"}, {"s": "「或曰……曰……」的寫法是：", "o": ["設問，預設反對意見再加駁斥", "反問，以問句加強肯定語氣", "比喻", "引用"], "e": "使論證更嚴密。"}, {"s": "作者把秦國從賂秦所得與戰勝所得相比，運用了：", "o": ["對比論證", "比喻論證", "引用論證", "假設論證"], "e": "突出賂秦之害。"}, {"s": "文中借「古人云」引「以地事秦，猶抱薪救火」一語，運用了：", "o": ["引用論證兼比喻論證", "舉例論證，列舉六國實例", "假設論證", "對比論證"], "e": "引古語作喻。"}, {"s": "「抱薪救火」一喻的作用是：", "o": ["形象說明賂秦只會加速滅亡", "描寫戰爭場面", "說明天氣乾燥，容易引起火災", "抒發感情"], "e": "以喻說理。"}, {"s": "「今日割五城，明日割十城」運用了：", "o": ["層遞，突出割地越來越多", "比喻，把城池比作日子", "擬人", "反問"], "e": "割地由五城增至十城，數量層層遞增，突出六國賂秦越割越多、秦國貪慾永無止境。"}, {"s": "「然後得一夕安寢；起視四境，而秦兵又至矣」的寫法是：", "o": ["轉折，突出割地換來的安寧短暫", "比喻，把秦兵比作不速之客", "誇張", "排比"], "e": "一安一危，對照鮮明。"}, {"s": "「諸侯之地有限，暴秦之欲無厭」運用了：", "o": ["對偶兼對比", "比喻，以土地比喻慾望", "擬人", "設問"], "e": "有限與無厭對照。"}, {"s": "「奉之彌繁，侵之愈急」運用了：", "o": ["層進，越奉獻越受侵逼", "比喻，以奉獻比喻侵略", "設問", "擬人"], "e": "奉獻越多，秦國侵略反而越急，兩者層層推進，說明賂秦不但不能止戰，反而招來更大侵逼。"}, {"s": "作者分析齊、燕、趙三國滅亡的原因，屬於：", "o": ["舉例論證", "比喻論證", "引用論證", "假設論證"], "e": "以史實支持論點。"}, {"s": "「向使三國各愛其地……或未易量」屬於：", "o": ["假設論證", "舉例論證", "引用論證", "比喻論證"], "e": "假設六國不犯錯的可能結果。"}, {"s": "「以賂秦之地，封天下之謀臣；以事秦之心，禮天下之奇才」運用了：", "o": ["對偶", "比喻", "擬人", "反問"], "e": "兩句結構對稱。"}, {"s": "「嗚呼！」與「悲夫！」在文中的作用是：", "o": ["感歎抒情，增強感染力", "提出疑問，引起讀者思考", "交代時間", "描寫景物"], "e": "議論中帶感情。"}, {"s": "「舉以予人，如棄草芥」運用了：", "o": ["比喻", "擬人", "對偶", "反問"], "e": "以丟棄小草比喻輕易割地。"}, {"s": "「則吾恐秦人食之不得下嚥也」運用了：", "o": ["誇張兼比喻", "擬人，把秦人寫成食客", "對偶", "設問"], "e": "形象寫秦人憂懼。"}, {"s": "《六國論》全文的結構是：", "o": ["總論點—分論證—結論（借古諷今）", "先敘事後抒情", "先寫景後議論", "只有記敘，按時間記述六國滅亡經過"], "e": "層次分明。"}, {"s": "最後一段以「茍以天下之大……」作結，作用是：", "o": ["點明借古諷今的寫作用意", "總結六國歷史", "讚美秦國，肯定其統一大業", "轉換話題"], "e": "由論古轉向諷今。"}, {"s": "「小則獲邑，大則得城」運用了：", "o": ["層遞，由小至大", "比喻，以城邑比喻利益", "擬人", "反問"], "e": "由獲得小邑到得到大城，所得由小至大層層遞進，寫秦國從諸侯割地中不斷擴張。"}, {"s": "「趙嘗五戰于秦，二敗而三勝」用具體數字，作用是：", "o": ["具體可信，說明用兵抵抗有效", "增加篇幅，使文章顯得更長", "表示時間", "顯示文采"], "e": "以數字證明趙能戰。"}, {"s": "「是又在六國下矣」把北宋與六國比較，屬於：", "o": ["類比，以六國警誡北宋", "誇張，貶低北宋的國力", "擬人", "反問"], "e": "把北宋與六國相類比：若以天下之大仍蹈六國賂秦覆轍，便連六國也不如，以此警誡北宋朝廷。"}];
+
+var SECTIONS = {
+  content: { key: 'content', title: '內容理解', Q: Q_CONTENT },
+  vocab: { key: 'vocab', title: '字詞解釋', Q: Q_VOCAB },
+  rhetorical: { key: 'rhetorical', title: '寫作手法', Q: Q_RHET }
+};
+var SEC_ORDER = ['content', 'vocab', 'rhetorical'];
+var MAX_TOTAL = 60;
+
+function shuffle(a) {
+  a = a.slice();
+  for (var i = a.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var t = a[i]; a[i] = a[j]; a[j] = t;
+  }
+  return a;
+}
+function $(id) { return document.getElementById(id); }
+
+/* state per section */
+var state = {};
+SEC_ORDER.forEach(function (k) {
+  state[k] = { order: null, cur: 0, answers: [], finished: false, score: 0 };
+});
+var currentSec = 'content';
+
+function studentInfo() {
+  return {
+    class: ($('cls').value || '').trim().toUpperCase(),
+    studentId: ($('sid').value || '').trim(),
+    name: ($('sname').value || '').trim()
+  };
+}
+function requireStudent() {
+  var s = studentInfo();
+  if (!s.class || !s.studentId || !s.name) {
+    alert('請先填寫班別、學號、姓名，再開始或交卷。');
+    $('studentCard').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    $('cls').focus();
+    return null;
+  }
+  return s;
+}
+
+function prepareOrder(secKey) {
+  var Q = SECTIONS[secKey].Q;
+  return Q.map(function (q) {
+    return { s: q.s, e: q.e, ans: q.o[0], o: shuffle(q.o) };
+  });
+}
+
+function startSection(secKey, force) {
+  currentSec = secKey;
+  var st = state[secKey];
+  if (force || !st.order) {
+    st.order = prepareOrder(secKey);
+    st.cur = 0;
+    st.answers = [];
+    st.finished = false;
+    st.score = 0;
+  }
+  document.querySelectorAll('.tabs button').forEach(function (b) {
+    var on = b.getAttribute('data-sec') === secKey;
+    b.setAttribute('aria-selected', on ? 'true' : 'false');
+    b.classList.toggle('active', on);
+  });
+  $('finalResult').hidden = true;
+  if (st.finished) {
+    $('panel-quiz').hidden = true;
+    showSecResult(secKey);
+  } else {
+    $('secResult').hidden = true;
+    $('panel-quiz').hidden = false;
+    showQuestion();
+  }
+  updateOverall();
+}
+
+function setSecScore(secKey) {
+  var st = state[secKey];
+  var s = 0;
+  for (var i = 0; i < st.answers.length; i++) {
+    if (st.answers[i] && st.answers[i].ok) s++;
+  }
+  st.score = s;
+  return s;
+}
+
+function updateOverall() {
+  var done = 0, totalScore = 0;
+  SEC_ORDER.forEach(function (k) {
+    var st = state[k];
+    var answered = st.answers.filter(function (a) { return a; }).length;
+    done += answered;
+    totalScore += setSecScore(k);
+  });
+  $('overallFill').style.width = (done / MAX_TOTAL * 100) + '%';
+  $('overallBar').setAttribute('aria-valuenow', String(done));
+  $('overallText').textContent = done + ' / ' + MAX_TOTAL + ' 題　總分 ' + totalScore;
+  $('scContent').textContent = state.content.score;
+  $('scVocab').textContent = state.vocab.score;
+  $('scRhet').textContent = state.rhetorical.score;
+
+  var allDone = SEC_ORDER.every(function (k) { return state[k].finished; });
+  if (allDone) {
+    $('submitEarlyBtn').hidden = false;
+    showFinal();
+  }
+}
+
+function showQuestion() {
+  var st = state[currentSec];
+  var q = st.order[st.cur];
+  var N = st.order.length;
+  st._picked = null;
+  st._checked = false;
+  $('stem').textContent = (st.cur + 1) + '. ' + q.s;
+  var box = $('opts');
+  box.innerHTML = '';
+  q.o.forEach(function (t, i) {
+    var l = document.createElement('label');
+    l.className = 'opt';
+    var r = document.createElement('input');
+    r.type = 'radio'; r.name = 'opt'; r.value = String(i);
+    var sp = document.createElement('span');
+    sp.textContent = String.fromCharCode(65 + i) + '. ' + t;
+    l.appendChild(r); l.appendChild(sp);
+    r.addEventListener('change', function () {
+      if (st._checked) return;
+      st._picked = i;
+      Array.prototype.forEach.call(box.children, function (c) { c.classList.remove('sel'); });
+      l.classList.add('sel');
+      $('checkBtn').disabled = false;
+    });
+    box.appendChild(l);
+  });
+  $('fb').hidden = true;
+  $('checkBtn').hidden = false;
+  $('checkBtn').disabled = true;
+  $('nextBtn').hidden = true;
+  $('secDoneBtn').hidden = true;
+  var answered = st.answers.filter(function (a) { return a; }).length;
+  $('secFill').style.width = (answered / N * 100) + '%';
+  $('secBar').setAttribute('aria-valuenow', String(answered));
+  $('secProgText').textContent = '第 ' + (st.cur + 1) + ' / ' + N + ' 題';
+  $('secScoreText').textContent = '本節答對：' + st.score;
+}
+
+function checkAnswer() {
+  var st = state[currentSec];
+  if (st._checked || st._picked === null) return;
+  st._checked = true;
+  $('checkBtn').disabled = true;
+  var q = st.order[st.cur];
+  var ok = q.o[st._picked] === q.ans;
+  st.answers[st.cur] = { ok: ok, pick: q.o[st._picked], ans: q.ans, idx: st.cur };
+  var labs = $('opts').children;
+  for (var i = 0; i < labs.length; i++) {
+    labs[i].querySelector('input').disabled = true;
+    if (q.o[i] === q.ans) labs[i].classList.add('ok');
+    else if (i === st._picked) labs[i].classList.add('bad');
+  }
+  var fb = $('fb');
+  fb.hidden = false;
+  fb.className = 'fb ' + (ok ? 'ok' : 'bad');
+  fb.textContent = (ok ? '✔ 答對了！' : '✘ 答錯了。正確答案：' + q.ans) + '　解說：' + q.e;
+  setSecScore(currentSec);
+  updateOverall();
+  $('secScoreText').textContent = '本節答對：' + st.score;
+  var answered = st.answers.filter(function (a) { return a; }).length;
+  var N = st.order.length;
+  $('secFill').style.width = (answered / N * 100) + '%';
+  $('checkBtn').hidden = true;
+  if (st.cur < N - 1) $('nextBtn').hidden = false;
+  else $('secDoneBtn').hidden = false;
+}
+
+function nextQuestion() {
+  var st = state[currentSec];
+  if (!st._checked) return;
+  if (st.cur < st.order.length - 1) {
+    st.cur++;
+    showQuestion();
+  }
+}
+
+function finishSection() {
+  var st = state[currentSec];
+  if (!st._checked) return;
+  st.finished = true;
+  setSecScore(currentSec);
+  updateOverall();
+  showSecResult(currentSec);
+  saveDraft();
+  if (SEC_ORDER.every(function (k) { return state[k].finished; })) {
+    showFinal();
+  }
+}
+
+function showSecResult(secKey) {
+  var st = state[secKey];
+  var N = SECTIONS[secKey].Q.length;
+  $('panel-quiz').hidden = true;
+  $('secResult').hidden = false;
+  $('secResultTitle').textContent = SECTIONS[secKey].title + '・本節完成';
+  $('secFinal').textContent = '得分：' + st.score + ' / ' + N;
+  var p = st.score / N;
+  $('secFinalMsg').textContent = p >= 0.8 ? '表現出色，繼續保持！' : p >= 0.5 ? '不錯，請重溫答錯的題目。' : '請細閱課文及解說，再試一次。';
+  var rv = $('secReview');
+  rv.innerHTML = '';
+  st.order.forEach(function (q, i) {
+    var a = st.answers[i];
+    if (!a) return;
+    var d = document.createElement('div');
+    d.className = 'rv';
+    var t = document.createElement('div');
+    t.className = 't';
+    t.textContent = (i + 1) + '. ' + q.s;
+    var r = document.createElement('div');
+    r.className = a.ok ? 'c' : 'w';
+    r.textContent = (a.ok ? '✔ 你的答案：' : '✘ 你的答案：') + a.pick + (a.ok ? '' : '｜正確答案：' + q.ans);
+    var e = document.createElement('div');
+    e.textContent = '解說：' + q.e;
+    d.appendChild(t); d.appendChild(r); d.appendChild(e);
+    rv.appendChild(d);
+  });
+  var idx = SEC_ORDER.indexOf(secKey);
+  var nextKey = idx < SEC_ORDER.length - 1 ? SEC_ORDER[idx + 1] : null;
+  $('goNextSecBtn').hidden = !nextKey;
+  $('goNextSecBtn').textContent = nextKey ? '前往「' + SECTIONS[nextKey].title + '」' : '';
+  $('goNextSecBtn').onclick = nextKey ? function () {
+    startSection(nextKey, false);
+    $('zice').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  } : null;
+  $('submitEarlyBtn').hidden = !SEC_ORDER.every(function (k) { return state[k].finished; });
+}
+
+function wrongSummary() {
+  var parts = [];
+  SEC_ORDER.forEach(function (k) {
+    var st = state[k];
+    var wrong = [];
+    st.answers.forEach(function (a, i) {
+      if (a && !a.ok) wrong.push(i + 1);
+    });
+    if (wrong.length) parts.push(SECTIONS[k].title + '錯題:' + wrong.join(','));
+  });
+  return parts.join('；') || '全對';
+}
+
+function buildPayload(stu) {
+  var sc = state.content.score;
+  var sv = state.vocab.score;
+  var sr = state.rhetorical.score;
+  var total = sc + sv + sr;
+  return {
+    timestamp: new Date().toISOString(),
+    class: stu.class,
+    studentId: stu.studentId,
+    name: stu.name,
+    scoreContent: sc,
+    scoreVocab: sv,
+    scoreRhetorical: sr,
+    scoreTotal: total,
+    maxTotal: MAX_TOTAL,
+    percent: Math.round(total / MAX_TOTAL * 1000) / 10,
+    answersSummary: wrongSummary(),
+    userAgent: navigator.userAgent || ''
+  };
+}
+
+function showFinal() {
+  if (!SEC_ORDER.every(function (k) { return state[k].finished; })) return;
+  $('finalResult').hidden = false;
+  var total = state.content.score + state.vocab.score + state.rhetorical.score;
+  $('finalScore').textContent = '總分：' + total + ' / ' + MAX_TOTAL;
+  $('finalDetail').innerHTML =
+    '內容理解 ' + state.content.score + '/20　｜　字詞解釋 ' + state.vocab.score +
+    '/20　｜　寫作手法 ' + state.rhetorical.score + '/20<br>正確率 ' +
+    (Math.round(total / MAX_TOTAL * 1000) / 10) + '%';
+  saveDraft();
+}
+
+function saveDraft() {
+  try {
+    var stu = studentInfo();
+    var draft = {
+      student: stu,
+      scores: {
+        content: state.content.score,
+        vocab: state.vocab.score,
+        rhetorical: state.rhetorical.score
+      },
+      finished: SEC_ORDER.map(function (k) { return { k: k, done: state[k].finished, score: state[k].score }; }),
+      summary: wrongSummary(),
+      savedAt: new Date().toISOString()
+    };
+    localStorage.setItem('liuguo_daodu_draft', JSON.stringify(draft));
+  } catch (e) {}
+}
+
+function submitToSheet() {
+  var stu = requireStudent();
+  if (!stu) return;
+  if (!SEC_ORDER.every(function (k) { return state[k].finished; })) {
+    alert('請先完成三個部分的全部題目，再交卷。');
+    return;
+  }
+  var payload = buildPayload(stu);
+  saveDraft();
+  var msg = $('submitMsg');
+  msg.hidden = false;
+
+  if (!GAS_WEBAPP_URL) {
+    msg.textContent = '⚠ 尚未設定 GAS_WEBAPP_URL，成績只保存在本機（localStorage 草稿），未能上傳老師試算表。請老師在 HTML 腳本頂部貼上 Apps Script 網頁應用程式網址。';
+    return;
+  }
+  msg.textContent = '正在上傳成績…';
+  $('submitBtn').disabled = true;
+  // text/plain + no-cors avoids Apps Script CORS preflight issues; doPost still receives body
+  fetch(GAS_WEBAPP_URL, {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+    body: JSON.stringify(payload)
+  }).then(function () {
+    msg.textContent = '✔ 已送出交卷請求。若老師試算表「交卷紀錄」出現新列，即表示成功。';
+    $('submitBtn').disabled = false;
+  }).catch(function () {
+    msg.textContent = '✘ 上傳失敗，請檢查網絡後再試。本機草稿已保存。';
+    $('submitBtn').disabled = false;
+  });
+}
+
+
+/* 語譯顯示／隱藏 */
+var yuyiToggle = $('yuyiToggle');
+var yuyiBody = $('yuyiBody');
+if (yuyiToggle && yuyiBody) {
+  yuyiToggle.addEventListener('click', function () {
+    var hide = !yuyiBody.hidden;
+    yuyiBody.hidden = hide;
+    yuyiToggle.setAttribute('aria-expanded', hide ? 'false' : 'true');
+    yuyiToggle.textContent = hide ? '顯示語譯' : '隱藏語譯';
+  });
+}
+
+/* video */
+function renderVideo() {
+  var area = $('videoArea');
+  var link = $('videoTitleLink');
+  if (YOUTUBE_ID) {
+    link.href = 'https://www.youtube.com/watch?v=' + encodeURIComponent(YOUTUBE_ID);
+    area.innerHTML = '<div class="video-wrap"><iframe src="https://www.youtube.com/embed/' +
+      encodeURIComponent(YOUTUBE_ID) + '" title="寶寶老師陪你快速溫範文｜第二集《六國論》" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe></div>';
+  } else {
+    link.href = '#shipin';
+    link.removeAttribute('target');
+    area.innerHTML = '<div class="video-box"><strong>影片尚未設定</strong><span>請老師在腳本頂部填寫 <code>const YOUTUBE_ID = "……";</code></span><span>標題：寶寶老師陪你快速溫範文｜第二集《六國論》</span></div>';
+  }
+}
+
+/* events */
+document.querySelectorAll('.tabs button').forEach(function (b) {
+  b.addEventListener('click', function () {
+    startSection(b.getAttribute('data-sec'), false);
+  });
+});
+$('checkBtn').addEventListener('click', checkAnswer);
+$('nextBtn').addEventListener('click', nextQuestion);
+$('secDoneBtn').addEventListener('click', finishSection);
+$('retrySecBtn').addEventListener('click', function () {
+  startSection(currentSec, true);
+  $('zice').scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
+$('submitBtn').addEventListener('click', submitToSheet);
+$('submitEarlyBtn').addEventListener('click', function () {
+  showFinal();
+  $('finalResult').scrollIntoView({ behavior: 'smooth', block: 'center' });
+});
+$('retryAllBtn').addEventListener('click', function () {
+  if (!confirm('確定全部重做？目前得分將重置。')) return;
+  SEC_ORDER.forEach(function (k) {
+    state[k] = { order: null, cur: 0, answers: [], finished: false, score: 0 };
+  });
+  $('finalResult').hidden = true;
+  startSection('content', true);
+  updateOverall();
+});
+
+/* restore draft note */
+try {
+  var d = localStorage.getItem('liuguo_daodu_draft');
+  if (d) {
+    var draft = JSON.parse(d);
+    if (draft.student) {
+      if (draft.student.class) $('cls').value = draft.student.class;
+      if (draft.student.studentId) $('sid').value = draft.student.studentId;
+      if (draft.student.name) $('sname').value = draft.student.name;
+    }
+  }
+} catch (e) {}
+
+renderVideo();
+updateOverall();
+// 可先作答；交卷時才強制填班別／學號／姓名
+startSection('content', false);
+
+})();
+</script>
+</body>
+</html>
+
